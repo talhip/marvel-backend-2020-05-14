@@ -11,6 +11,9 @@ app.get("/", (req, res) => {
 const charactersRoute = require("./routes/characters-route");
 app.use(charactersRoute);
 
+const favoriteCharacterRoute = require("./routes/favorite-character-route");
+app.use(favoriteCharacterRoute);
+
 const comicsRoute = require("./routes/comics-route");
 app.use(comicsRoute);
 
