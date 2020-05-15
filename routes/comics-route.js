@@ -15,7 +15,7 @@ router.get("/comics", async (req, res) => {
       res.json(response.data);
     } else {
       const response = await axios.get(
-        `https://gateway.marvel.com/v1/public/comics?${hash}&limit=100&offset=${offset}`
+        `https://gateway.marvel.com/v1/public/comics?orderBy=title&${hash}&limit=100&offset=${offset}`
       );
       res.json(response.data);
     }
